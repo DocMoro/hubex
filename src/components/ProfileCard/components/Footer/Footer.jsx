@@ -1,7 +1,6 @@
-import { networkData } from '../../../../constants/api'
 import s from './Footer.module.less'
 
-const Footer = () => {
+const Footer = ({ networkData }) => {
   return (
     <footer className={s.footer}>
       <ul className={s.list}>

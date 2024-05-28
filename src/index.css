@@ -4,10 +4,8 @@
 * {
   margin: 0;
   padding: 0;
-}
 
-html {
-  font-family: 'TT Firs Neue', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 button {

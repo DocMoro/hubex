@@ -56,4 +56,16 @@ const networkData = [
   }
 ]
 
-export { networkData }
+const personData = {
+  name: 'Иванов Иван Петрович',
+  position: 'Директор',
+  mobile: '+7 (000) 000-00-00',
+  call: '+7 (000) 000-00-00',
+  email: 'Почта',
+  website: 'Личный сайт',
+  location: 'Адрес',
+  date: 'Дата рождения',
+  rank: 'Звание, учёная степень'
+}
+
+export { networkData, personData }
