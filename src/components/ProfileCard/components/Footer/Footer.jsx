@@ -1,9 +1,9 @@
-import { networkData } from '../../constants/api'
+import { networkData } from '../../../../constants/api'
 import s from './Footer.module.less'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={s.footer}>
       <ul className={s.list}>
         {networkData.map((el, index) => (
           <li key={index} className={s.cell}>

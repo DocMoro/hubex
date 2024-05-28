@@ -1,11 +1,11 @@
 import './App.css'
 
-import Footer from './components/Footer/Footer'
+import ProfileCard from './components/ProfileCard/ProfileCard'
 
 function App() {
   return (
     <>
-      <Footer />
+      <ProfileCard />
     </>
   )
 }
