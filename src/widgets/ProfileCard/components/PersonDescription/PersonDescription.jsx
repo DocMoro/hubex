@@ -15,11 +15,11 @@ const PersonDescription = ({ personData }) => {
       </h3>
       <h4 className={s.subtitle}>{position}</h4>
       <div className={s.list}>
-        <Field text={mobile} iconType="mobile" />
-        <Field text={call} iconType="call" />
-        <Field text={call} iconType="call" />
-        <Field text={email} iconType="email" />
-        <Field text={website} iconType="website" />
+        <Field text={mobile} iconType="mobile" link="tel:+123456789" />
+        <Field text={call} iconType="call" link="tel:+123456789" />
+        <Field text={call} iconType="call" link="tel:+123456789" />
+        <Field text={email} iconType="email" link="mailto:support@expo.io" />
+        <Field text={website} iconType="website" link="#" />
         <Field text={location} iconType="location" />
         <Field text={date} iconType="date" />
         <Field text={rank} iconType="user" />

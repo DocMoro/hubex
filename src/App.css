@@ -18,3 +18,7 @@ body {
 
   background-color: #292727;
 }
+
+a:-webkit-any-link {
+  color: var(--color-black);
+}
