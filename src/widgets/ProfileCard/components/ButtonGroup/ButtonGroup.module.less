@@ -1,0 +1,44 @@
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  font-family: 'TT Firs Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: var(--color-white);
+
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.5;
+
+  &Active {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+
+.iconPointer {
+  width: 16px;
+  height: 11px;
+
+  background-image: url('../../../../assets/pointer.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.iconTransform {
+  transform: rotate(180deg);
+}

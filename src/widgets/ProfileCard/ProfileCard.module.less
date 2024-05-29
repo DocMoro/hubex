@@ -1,5 +1,5 @@
 .section {
-  max-width: 648px;
+  position: relative;
   width: 100%;
 
   background-color: #fefefe;
@@ -8,9 +8,15 @@
 }
 
 .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   display: flex;
 
-  margin: 32px 0 23px 32px;
+  width: 100%;
+
+  padding: 32px 0 23px 32px;
 }
 
 .rightBlock {
@@ -19,4 +25,12 @@
 
 .logoPosition {
   margin-bottom: 10px;
+}
+
+.visible {
+  z-index: 1;
+}
+
+.footerPosition {
+  margin-top: 622px;
 }

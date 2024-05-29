@@ -1,4 +1,8 @@
+import clsx from 'clsx'
+import { useCallback, useState } from 'react'
+
 import { companyData, networkData, personData } from '../../constants/api'
+import ButtonGroup from './components/ButtonGroup/ButtonGroup'
 import DesktopImageContainer from './components/DesktopImageContainer/DesktopImageContainer'
 import Footer from './components/Footer/Footer'
 import Logo from './components/Logo/Logo'
@@ -7,21 +11,25 @@ import СompanyDescription from './components/СompanyDescription/СompanyDescri
 import s from './ProfileCard.module.less'
 
 const ProfileCard = () => {
+  const [visible, setVisible] = useState(true)
+
+  const handleClick = useCallback(() => {
+    setVisible(!visible)
+  }, [visible])
+
   return (
     <>
+      <ButtonGroup visible={visible} handleClick={handleClick} />
       <section className={s.section}>
-        <div className={s.container}>
+        <div className={clsx(s.container, !visible && s.visible)}>
           <DesktopImageContainer imageLink={personData.imageLink} />
           <div className={s.rightBlock}>
             <Logo className={s.logoPosition} />
             <PersonDescription personData={personData} />
           </div>
         </div>
-        <Footer networkData={networkData} />
-      </section>
-      <section className={s.section}>
-        <СompanyDescription companyData={companyData} />
-        <Footer networkData={networkData} />
+        <СompanyDescription companyData={companyData} className={clsx(visible && s.visible)} />
+        <Footer networkData={networkData} className={s.footerPosition} />
       </section>
     </>
   )

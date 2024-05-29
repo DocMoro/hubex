@@ -1,8 +1,10 @@
+import clsx from 'clsx'
+
 import s from './Footer.module.less'
 
-const Footer = ({ networkData }) => {
+const Footer = ({ networkData, className }) => {
   return (
-    <footer className={s.footer}>
+    <footer className={clsx(s.footer, className && className)}>
       <ul className={s.list}>
         {networkData.map((el, index) => (
           <li key={index} className={s.cell}>

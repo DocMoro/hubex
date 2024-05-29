@@ -4,10 +4,10 @@ import Field from '../Field/Field'
 import Logo from '../Logo/Logo'
 import s from './СompanyDescription.module.less'
 
-const СompanyDescription = ({ companyData }) => {
+const СompanyDescription = ({ companyData, className }) => {
   const { mobile, email, website, location, date, print, name, description, client } = companyData
   return (
-    <div className={s.mobileContainer}>
+    <div className={clsx(s.mobileContainer, className && className)}>
       <div>
         <Logo className={clsx(s.logoPosition, s.logoHight)} />
         <h3 className={s.title}>{name}</h3>
