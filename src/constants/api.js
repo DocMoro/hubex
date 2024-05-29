@@ -65,7 +65,8 @@ const personData = {
   website: 'Личный сайт',
   location: 'Адрес',
   date: 'Дата рождения',
-  rank: 'Звание, учёная степень'
+  rank: 'Звание, учёная степень',
+  imageLink: '/hubex/src/constants/portrait.jpg'
 }
 
 export { networkData, personData }
