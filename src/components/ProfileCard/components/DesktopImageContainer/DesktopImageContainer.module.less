@@ -2,6 +2,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3em;
+  white-space: nowrap;
 
   padding: 18px 60px;
   background-color: var(--color-black);
@@ -12,11 +13,20 @@
   box-sizing: border-box;
 
   margin-top: 16px;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }
 
 .image {
   object-fit: cover;
   object-position: center;
+
+  border-radius: 8px;
 }
 
 .container {

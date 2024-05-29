@@ -1,6 +1,7 @@
 import { networkData, personData } from '../../constants/api'
 import DesktopImageContainer from './components/DesktopImageContainer/DesktopImageContainer'
 import Footer from './components/Footer/Footer'
+import Logo from './components/Logo/Logo'
 import PersonDescription from './components/PersonDescription/PersonDescription'
 import s from './ProfileCard.module.less'
 
@@ -9,7 +10,10 @@ const ProfileCard = () => {
     <section className={s.section}>
       <div className={s.container}>
         <DesktopImageContainer imageLink={personData.imageLink} />
-        <PersonDescription personData={personData} />
+        <div className={s.rightBlock}>
+          <Logo className={s.logoPosition} />
+          <PersonDescription personData={personData} />
+        </div>
       </div>
       <Footer networkData={networkData} />
     </section>
