@@ -5,19 +5,19 @@ import s from './Field.module.less'
 const Field = ({ text, iconType, link }) => {
   if (link) {
     return (
-      <a href={link} target="_blank" rel="noreferrer">
-        <div className={s.field}>
+      <li>
+        <a className={s.field} href={link} target="_blank" rel="noreferrer">
           <div className={clsx(s.icon, s[`icon_type_${iconType}`])}></div>
           <p className={s.text}>{text}</p>
-        </div>
-      </a>
+        </a>
+      </li>
     )
   }
   return (
-    <div className={s.field}>
+    <li className={s.field}>
       <div className={clsx(s.icon, s[`icon_type_${iconType}`])}></div>
       <p className={s.text}>{text}</p>
-    </div>
+    </li>
   )
 }
 

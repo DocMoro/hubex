@@ -14,7 +14,7 @@ const PersonDescription = ({ personData }) => {
         {`${nameData[1]} ${nameData[2]}`}
       </h3>
       <h4 className={s.subtitle}>{position}</h4>
-      <div className={s.list}>
+      <ul className={s.list}>
         <Field text={mobile} iconType="mobile" link="tel:+123456789" />
         <Field text={call} iconType="call" link="tel:+123456789" />
         <Field text={call} iconType="call" link="tel:+123456789" />
@@ -23,7 +23,7 @@ const PersonDescription = ({ personData }) => {
         <Field text={location} iconType="location" />
         <Field text={date} iconType="date" />
         <Field text={rank} iconType="user" />
-      </div>
+      </ul>
     </div>
   )
 }

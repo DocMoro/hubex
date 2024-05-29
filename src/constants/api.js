@@ -69,4 +69,16 @@ const personData = {
   imageLink: '/hubex/src/constants/portrait.jpg'
 }
 
-export { networkData, personData }
+const companyData = {
+  name: 'Название компании',
+  description: 'Описание компании',
+  mobile: '+7 (000) 000-00-00',
+  email: 'Почта',
+  website: 'Личный сайт',
+  location: 'Адрес',
+  date: 'Дата рождения',
+  client: 'Клиент Клиент Клиент Клиент Клиент Клиент Клиент Клиент Клиент',
+  print: 'Факс'
+}
+
+export { companyData, networkData, personData }

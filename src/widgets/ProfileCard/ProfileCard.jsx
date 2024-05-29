@@ -1,22 +1,29 @@
-import { networkData, personData } from '../../constants/api'
+import { companyData, networkData, personData } from '../../constants/api'
 import DesktopImageContainer from './components/DesktopImageContainer/DesktopImageContainer'
 import Footer from './components/Footer/Footer'
 import Logo from './components/Logo/Logo'
 import PersonDescription from './components/PersonDescription/PersonDescription'
+import СompanyDescription from './components/СompanyDescription/СompanyDescription'
 import s from './ProfileCard.module.less'
 
 const ProfileCard = () => {
   return (
-    <section className={s.section}>
-      <div className={s.container}>
-        <DesktopImageContainer imageLink={personData.imageLink} />
-        <div className={s.rightBlock}>
-          <Logo className={s.logoPosition} />
-          <PersonDescription personData={personData} />
+    <>
+      <section className={s.section}>
+        <div className={s.container}>
+          <DesktopImageContainer imageLink={personData.imageLink} />
+          <div className={s.rightBlock}>
+            <Logo className={s.logoPosition} />
+            <PersonDescription personData={personData} />
+          </div>
         </div>
-      </div>
-      <Footer networkData={networkData} />
-    </section>
+        <Footer networkData={networkData} />
+      </section>
+      <section className={s.section}>
+        <СompanyDescription companyData={companyData} />
+        <Footer networkData={networkData} />
+      </section>
+    </>
   )
 }
 
