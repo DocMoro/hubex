@@ -8,12 +8,14 @@ const PersonDescription = ({ personData }) => {
 
   return (
     <div className={s.description}>
-      <h3 className={s.title}>
-        {nameData[0]}
-        <br />
-        {`${nameData[1]} ${nameData[2]}`}
-      </h3>
-      <h4 className={s.subtitle}>{position}</h4>
+      <div className={s.blockTitle}>
+        <h3 className={s.title}>
+          {nameData[0]}
+          <br />
+          {`${nameData[1]} ${nameData[2]}`}
+        </h3>
+        <h4 className={s.subtitle}>{position}</h4>
+      </div>
       <ul className={s.list}>
         <Field text={mobile} iconType="mobile" link="tel:+123456789" />
         <Field text={call} iconType="call" link="tel:+123456789" />

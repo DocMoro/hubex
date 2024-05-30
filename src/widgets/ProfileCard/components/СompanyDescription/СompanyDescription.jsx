@@ -7,8 +7,8 @@ import s from './СompanyDescription.module.less'
 const СompanyDescription = ({ companyData, className }) => {
   const { mobile, email, website, location, date, print, name, description, client } = companyData
   return (
-    <div className={clsx(s.mobileContainer, className && className)}>
-      <div>
+    <div className={clsx(s.container, className && className)}>
+      <div className={s.blockLogo}>
         <Logo className={clsx(s.logoPosition, s.logoHight)} />
         <h3 className={s.title}>{name}</h3>
         <h4 className={s.subtitle}>{description}</h4>

@@ -1,6 +1,9 @@
+@import '../../../../constants/var.less';
+
 .buttonContainer {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   margin-bottom: 16px;
 }
@@ -41,4 +44,10 @@
 
 .iconTransform {
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: @mobile) {
+  .buttonContainer {
+    display: none;
+  }
 }
