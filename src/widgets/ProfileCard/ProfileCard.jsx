@@ -11,27 +11,30 @@ import СompanyDescription from './components/СompanyDescription/СompanyDescri
 import s from './ProfileCard.module.less'
 
 const ProfileCard = () => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   const handleClick = useCallback(() => {
     setVisible(!visible)
   }, [visible])
 
   return (
-    <>
+    <section className={s.section}>
       <ButtonGroup visible={visible} handleClick={handleClick} />
-      <section className={s.section}>
-        <div className={clsx(s.container, !visible && s.visible)}>
+      <div className={clsx(s.frame, !visible && s.frameVisible)}>
+        <div className={s.container}>
           <DesktopImageContainer imageLink={personData.imageLink} />
           <div className={s.rightBlock}>
             <Logo className={s.logoPosition} />
             <PersonDescription personData={personData} />
           </div>
         </div>
-        <СompanyDescription companyData={companyData} className={clsx(visible && s.visible)} />
         <Footer networkData={networkData} className={s.footerPosition} />
-      </section>
-    </>
+      </div>
+      <div className={clsx(s.frame, visible && s.frameVisible)}>
+        <СompanyDescription companyData={companyData} />
+        <Footer networkData={networkData} />
+      </div>
+    </section>
   )
 }
 
