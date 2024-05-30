@@ -6,6 +6,7 @@ import ButtonGroup from './components/ButtonGroup/ButtonGroup'
 import DesktopImageContainer from './components/DesktopImageContainer/DesktopImageContainer'
 import Footer from './components/Footer/Footer'
 import Logo from './components/Logo/Logo'
+import MobileImageContainer from './components/MobileImageContainer/MobileImageContainer'
 import PersonDescription from './components/PersonDescription/PersonDescription'
 import СompanyDescription from './components/СompanyDescription/СompanyDescription'
 import s from './ProfileCard.module.less'
@@ -20,6 +21,7 @@ const ProfileCard = () => {
   return (
     <section className={s.section}>
       <ButtonGroup visible={visible} handleClick={handleClick} />
+      <MobileImageContainer imageLink={personData.imageLink} className={s.mbImgPosition} />
       <div className={clsx(s.frame, !visible && s.frameVisible)}>
         <div className={s.container}>
           <DesktopImageContainer imageLink={personData.imageLink} />
