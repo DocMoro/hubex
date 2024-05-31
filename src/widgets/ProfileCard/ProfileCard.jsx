@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { useCallback, useState } from 'react'
 
-import { companyData, networkData, personData } from '../../constants/api'
 import ButtonGroup from './components/ButtonGroup/ButtonGroup'
 import DesktopImageContainer from './components/DesktopImageContainer/DesktopImageContainer'
 import Footer from './components/Footer/Footer'
@@ -11,7 +10,7 @@ import PersonDescription from './components/PersonDescription/PersonDescription'
 import СompanyDescription from './components/СompanyDescription/СompanyDescription'
 import s from './ProfileCard.module.less'
 
-const ProfileCard = () => {
+const ProfileCard = ({ personData, networkData, companyData }) => {
   const [visible, setVisible] = useState(false)
 
   const handleClick = useCallback(() => {
